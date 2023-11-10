@@ -25,5 +25,6 @@ public class Calculattions {
 		return op1 / op2;
 
 	}
+	
 
 }
