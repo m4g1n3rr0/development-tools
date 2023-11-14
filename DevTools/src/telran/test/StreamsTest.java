@@ -28,11 +28,20 @@ class StreamTests {
 	}
 	
 	@Test
+	@Disabled
 	void displaySportloto() {
 		Random gen = new Random();
 		gen.ints(7, 1, 50)
 		.distinct()
 		.forEach(n -> System.out.print(n + " "));
 	}
-
+	
+	@Test
+	void evenOddGrouping() {
+		
+		Map<String, List<Integer>> mapOddEven = Arrays.stream(arr).boxed().collect(Collectors.groupingBy(n -> n % 2 == 0 ? "even" : "odd"));
+		System.out.println(mapOddEven);
+		
+	}
+	
 }
